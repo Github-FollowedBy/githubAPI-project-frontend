@@ -1,8 +1,5 @@
 .App {
   text-align: center;
-  background-color: black;
-  min-height: 100vh;
-  height: auto;
 }
 
 .container {
@@ -15,4 +12,7 @@
 }
 input {
   border-radius: 50px !important;
+}
+p {
+  color: black;
 }
