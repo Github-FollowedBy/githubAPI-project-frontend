@@ -27,8 +27,7 @@ function InputComponent() {
   const handleClearAll = () => {
     setErrMsg(null);
     setShowTable(false);
-    const emptyArr = [];
-    setIntersectingUsers(emptyArr);
+    setIntersectingUsers([]);
     setPrimaryUser("");
     setSecondaryUser("");
   };
@@ -76,9 +75,8 @@ function InputComponent() {
       })
       .catch((err) => {
         setShowTable(false);
-        setErrMsg(err);
-        const emptyArr = [];
-        setIntersectingUsers(emptyArr);
+        setErrMsg("Internal Server Error");
+        setIntersectingUsers([]);
       });
     // setTimeout(() => {
     //   setSpinnerFlag(false);
