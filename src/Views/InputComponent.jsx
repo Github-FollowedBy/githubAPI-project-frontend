@@ -27,7 +27,8 @@ function InputComponent() {
   const handleClearAll = () => {
     setErrMsg(null);
     setShowTable(false);
-    setIntersectingUsers([]);
+    const emptyArr = [];
+    setIntersectingUsers(emptyArr);
     setPrimaryUser("");
     setSecondaryUser("");
   };
@@ -76,7 +77,8 @@ function InputComponent() {
       .catch((err) => {
         setShowTable(false);
         setErrMsg(err);
-        setIntersectingUsers([]);
+        const emptyArr = [];
+        setIntersectingUsers(emptyArr);
       });
     // setTimeout(() => {
     //   setSpinnerFlag(false);
