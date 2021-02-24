@@ -16,3 +16,9 @@ input {
 p {
   color: black;
 }
+a {
+  font-size: 21px;
+}
+.table p {
+  font-size: 21px;
+}

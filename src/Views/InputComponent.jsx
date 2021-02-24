@@ -75,6 +75,7 @@ function InputComponent() {
       })
       .catch((err) => {
         setShowTable(false);
+        setSpinnerFlag(false);
         setErrMsg("Internal Server Error");
         setIntersectingUsers([]);
       });

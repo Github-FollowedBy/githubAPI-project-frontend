@@ -1,6 +1,7 @@
 import React from "react";
 import Table from "react-bootstrap/Table";
 import RandomQuotes from "./RandomQuotes";
+import { tableColumn } from "../globalMetaData";
 
 function OutputComponent(props) {
   return (
@@ -8,20 +9,28 @@ function OutputComponent(props) {
       <Table responsive>
         <thead>
           <tr>
-            <th key="1">
-              <p>UserName</p>
-            </th>
-            <th key="2">
-              <p>Profile</p>
-            </th>
+            {tableColumn.map((col, index) => {
+              return (
+                <th key={index}>
+                  <p>{col}</p>
+                </th>
+              );
+            })}
           </tr>
         </thead>
         <tbody>
           {props.listOfIntersectingUsers.map((user, index) => {
             return (
               <tr key={index}>
+                <td style={{ fontSize: "21px" }}>{index + 1}</td>
                 <td>
-                  <p>{user.login}</p>
+                  <a
+                    href={`https://github.com/${user.login}`}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    {user.login}
+                  </a>
                 </td>
                 <td>
                   <img
