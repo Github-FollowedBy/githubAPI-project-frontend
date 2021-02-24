@@ -71,7 +71,6 @@ function InputComponent() {
           setErrMsg(response.message);
           setSpinnerFlag(false);
         }
-        console.log(response);
       })
       .catch((err) => {
         setShowTable(false);
@@ -79,50 +78,6 @@ function InputComponent() {
         setErrMsg("Internal Server Error");
         setIntersectingUsers([]);
       });
-    // setTimeout(() => {
-    //   setSpinnerFlag(false);
-    //   setShowTable(true);
-    //   setIntersectingUsers([
-    //     // {
-    //     //   login: "rhnvrm",
-    //     //   profileUrl: "https://avatars.githubusercontent.com/u/37259966?v=4",
-    //     // },
-    //     // {
-    //     //   login: "rhnvrm",
-    //     //   profileUrl: "https://avatars.githubusercontent.com/u/37259966?v=4",
-    //     // },
-    //     // {
-    //     //   login: "rhnvrm",
-    //     //   profileUrl: "https://avatars.githubusercontent.com/u/37259966?v=4",
-    //     // },
-    //     // {
-    //     //   login: "rhnvrm",
-    //     //   profileUrl: "https://avatars.githubusercontent.com/u/37259966?v=4",
-    //     // },
-    //     // {
-    //     //   login: "rhnvrm",
-    //     //   profileUrl: "https://avatars.githubusercontent.com/u/37259966?v=4",
-    //     // },
-    //     // {
-    //     //   login: "rhnvrm",
-    //     //   profileUrl: "https://avatars.githubusercontent.com/u/37259966?v=4",
-    //     // },
-    //     // {
-    //     //   login: "rhnvrm",
-    //     //   profileUrl: "https://avatars.githubusercontent.com/u/37259966?v=4",
-    //     // },
-    //     // {
-    //     //   login: "rhnvrm",
-    //     //   profileUrl: "https://avatars.githubusercontent.com/u/37259966?v=4",
-    //     // },
-    //     // {
-    //     //   login: "rhnvrm",
-    //     //   profileUrl: "https://avatars.githubusercontent.com/u/37259966?v=4",
-    //     // },
-    //   ]);
-    //   setShowTable(false);
-    //   setErrMsg("limit reached");
-    // }, 5 * 1000);
   };
 
   return (
